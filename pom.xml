@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ihankun.parent</groupId>
+		<artifactId>kun-spring-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.ihankun.api</groupId>
+	<artifactId>spring-cloud-api-demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>${project.artifactId}</name>
+	<packaging>pom</packaging>
+	<description>${project.artifactId}</description>
+
+	<properties>
+		<java.version>11</java.version>
+	</properties>
+
+	<modules>
+		<module>spring-cloud-api-demo-api</module>
+		<module>spring-cloud-api-demo-server</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ihankun.core.spring.server</groupId>
+			<artifactId>spring-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ihankun.core.commons</groupId>
+			<artifactId>commons</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ihankun.core.base</groupId>
+			<artifactId>base</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
