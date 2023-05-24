@@ -12,6 +12,7 @@
 	<artifactId>spring-cloud-api-demo-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>${project.artifactId}</name>
+	<packaging>jar</packaging>
 	<description>${project.artifactId}</description>
 
 	<properties>
