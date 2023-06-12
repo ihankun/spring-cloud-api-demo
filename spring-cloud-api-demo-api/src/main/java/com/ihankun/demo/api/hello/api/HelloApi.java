@@ -17,4 +17,7 @@ public interface HelloApi {
 
     @GetMapping("/country")
     ResponseResult<String> country();
+
+    @GetMapping("/openTest")
+    ResponseResult<String> openTest();
 }

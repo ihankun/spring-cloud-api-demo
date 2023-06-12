@@ -23,4 +23,9 @@ public class HelloController implements HelloApi {
     public ResponseResult<String> country() {
         return ResponseResult.success(helloService.country());
     }
+
+    @Override
+    public ResponseResult<String> openTest() {
+        return ResponseResult.success(helloService.openTest());
+    }
 }

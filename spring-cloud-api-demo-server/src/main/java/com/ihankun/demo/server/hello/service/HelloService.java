@@ -5,4 +5,6 @@ public interface HelloService {
     String hello();
 
     String country();
+
+    String openTest();
 }

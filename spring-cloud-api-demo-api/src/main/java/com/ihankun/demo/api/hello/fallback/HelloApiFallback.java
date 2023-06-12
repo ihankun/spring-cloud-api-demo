@@ -23,6 +23,11 @@ public class HelloApiFallback implements FallbackFactory<HelloApi> {
             public ResponseResult<String> country() {
                 return ResponseResult.fallback(throwable);
             }
+
+            @Override
+            public ResponseResult<String> openTest() {
+                return ResponseResult.fallback(throwable);
+            }
         };
     }
 }
