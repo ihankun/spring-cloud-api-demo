@@ -2,7 +2,6 @@ package com.ihankun.demo.server.hello.service.impl;
 
 import com.ihankun.core.base.api.ResponseResult;
 import com.ihankun.core.commons.http.HttpBuilder;
-import com.ihankun.core.commons.http.HttpType;
 import com.ihankun.core.commons.http.impl.RestTemplateHttp;
 import com.ihankun.demo.server.hello.entity.DictCountryVO;
 import com.ihankun.demo.server.hello.service.HelloService;
@@ -53,6 +52,11 @@ public class HelloServiceImpl implements HelloService {
                 new ParameterizedTypeReference<ResponseResult<String>>() {
         });
 
-        return result.getData();
+        ResponseResult<List<DictCountryVO>> result1 = HttpBuilder.ins().get("http://127.0.0.1:10001/api/v1/dict/country",
+                new ParameterizedTypeReference<ResponseResult<List<DictCountryVO>>>() {
+                });
+        String name1 = result1.getData().get(0).getName();
+
+        return result.getData()+name1;
     }
 }
