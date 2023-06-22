@@ -1,6 +1,6 @@
 package com.ihankun.demo.server.hello.controller;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.demo.api.hello.api.HelloApi;
 import com.ihankun.demo.server.hello.service.HelloService;
 import lombok.extern.slf4j.Slf4j;
@@ -17,5 +17,15 @@ public class HelloController implements HelloApi {
     @Override
     public ResponseResult<String> hello() {
         return ResponseResult.success(helloService.hello());
+    }
+
+    @Override
+    public ResponseResult<String> country() {
+        return ResponseResult.success(helloService.country());
+    }
+
+    @Override
+    public ResponseResult<String> openTest() {
+        return ResponseResult.success(helloService.openTest());
     }
 }
