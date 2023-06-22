@@ -1,6 +1,6 @@
 package com.ihankun.demo.api.hello.api;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.demo.api.hello.fallback.HelloApiFallback;
 import io.swagger.annotations.Api;
 import org.springframework.cloud.openfeign.FeignClient;

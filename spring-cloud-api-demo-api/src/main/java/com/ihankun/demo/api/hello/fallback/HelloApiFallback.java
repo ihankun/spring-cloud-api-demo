@@ -1,6 +1,6 @@
 package com.ihankun.demo.api.hello.fallback;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.demo.api.hello.api.HelloApi;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;

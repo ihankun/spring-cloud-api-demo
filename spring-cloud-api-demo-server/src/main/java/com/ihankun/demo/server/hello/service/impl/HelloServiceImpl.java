@@ -1,6 +1,6 @@
 package com.ihankun.demo.server.hello.service.impl;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.core.commons.http.HttpBuilder;
 import com.ihankun.core.commons.http.impl.RestTemplateHttp;
 import com.ihankun.demo.server.hello.entity.DictCountryVO;
