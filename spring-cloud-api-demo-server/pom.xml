@@ -85,6 +85,46 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+<!--			<plugin>-->
+<!--				<groupId>com.spotify</groupId>-->
+<!--				<artifactId>docker-maven-plugin</artifactId>-->
+<!--				<version>0.4.14</version>-->
+<!--				<configuration>-->
+<!--					<imageName>ihankun/${project.artifactId}</imageName>-->
+<!--					<dockerDirectory>src/main/docker</dockerDirectory>-->
+<!--					<dockerHost>http://192.168.0.123:2375</dockerHost>-->
+<!--					<resources>-->
+<!--						<resource>-->
+<!--							<targetPath>/</targetPath>-->
+<!--							<directory>${project.artifactId}</directory>-->
+<!--							<include>${project.artifactId}.jar</include>-->
+<!--						</resource>-->
+<!--					</resources>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.9</version>
+				<executions>
+					<execution>
+						<id>default</id>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<repository>ihankun/${project.artifactId}</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+			</plugin>
+
+
 		</plugins>
 <!--		<resources>-->
 <!--			<resource>-->
